@@ -6,6 +6,8 @@
 LionFire Open Software Documentation
 ====================================
 
+Actual content coming at some point!
+
 Contents:
 
 .. toctree::
