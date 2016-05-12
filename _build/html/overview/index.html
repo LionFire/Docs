@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Vos Assets &mdash; LionFire Open Software 1.0 documentation</title>
+  <title>Overview &mdash; LionFire Open Software 1.0 documentation</title>
   
 
   
@@ -30,9 +30,7 @@
   
 
   
-    <link rel="top" title="LionFire Open Software 1.0 documentation" href="../index.html"/>
-        <link rel="next" title="Templating" href="../templating/index.html"/>
-        <link rel="prev" title="Vos" href="../vos/index.html"/> 
+    <link rel="top" title="LionFire Open Software 1.0 documentation" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -81,7 +79,7 @@
           
             
             
-                <ul class="current">
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="../core/index.html">Core</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../objectbus/index.html">ObjectBus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../objectbus/index.html#obase-implementations">OBase Implementations</a></li>
@@ -89,12 +87,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../vos/index.html">Vos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vos/index.html#layers">Layers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vos/index.html#platforms-supported">Platforms Supported</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Vos Assets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#overview">Overview</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/index.html">Vos Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/index.html#overview">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../templating/index.html">Templating</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">VOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">Glossary</a></li>
 </ul>
 
             
@@ -125,11 +121,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>Vos Assets</li>
+    <li>Overview</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/assets/index.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/overview/index.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -139,22 +135,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="vos-assets">
-<h1>Vos Assets<a class="headerlink" href="#vos-assets" title="Permalink to this headline">¶</a></h1>
-<p>Assets are referenced by type and a name (or path) that is unique to that type.  This provides a conveneint way to access instances of a type by name without worrying about where they are in a Vos tree.</p>
-<p>Assets will be stored in a location configured once by the application, and the location for each type can be configured independently.</p>
-<p>This is a child project of Vos.</p>
-</div>
-<div class="section" id="overview">
+  <div class="section" id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="creating-an-asset">
-<h2>Creating an Asset<a class="headerlink" href="#creating-an-asset" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-C#"><div class="highlight"><pre><span></span><span class="kt">var</span> <span class="n">hTower</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HAsset</span><span class="p">&lt;</span><span class="n">TCapacitor</span><span class="p">&gt;(</span><span class="s">&quot;Tower3&quot;</span><span class="p">);</span>
-</pre></div>
+<p>Jared Thirsk and LionFire Games are making available various open source software packages.  Software is all C# so far, with some Aurelia-based web apps potentially coming at some point.</p>
+<div class="section" id="current-status">
+<h2>Current Status<a class="headerlink" href="#current-status" title="Permalink to this headline">¶</a></h2>
+<p>Although I intend to put up several open source projects, not many are up yet.  My priority right now is to ship some (closed-source) software, but if you stumble upon this site and think some of my software may be useful, let me know by email (jared+public at thirsk.ca) and I&#8217;ll see if I have time to upload these projects.</p>
 </div>
-<div class="highlight-C#"><div class="highlight"><pre><span></span><span class="kt">var</span> <span class="n">rTower</span> <span class="p">=</span> <span class="n">AssetReference</span><span class="p">&lt;</span><span class="n">TCapacitor</span><span class="p">&gt;.</span><span class="n">FromName</span><span class="p">(</span><span class="s">&quot;Tower3&quot;</span><span class="p">);</span>
-</pre></div>
 </div>
+<div class="section" id="vos">
+<h1>VOS<a class="headerlink" href="#vos" title="Permalink to this headline">¶</a></h1>
+<p>Vos (Virtual object system) is an ambitious attempt to create a multi-purpose virtual filesystem, except centered around objects.  As with other virtual filesystems, the underlying data store could be files on a disk, hierarchical data provided by some sort of plugin, or virtual in-memory objects (like the linux /sys filesystem.)</p>
+<div class="section" id="child-projects">
+<h2>Child Projects<a class="headerlink" href="#child-projects" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ObjectBus</li>
+<li></li>
+</ul>
 </div>
 </div>
 
@@ -162,15 +159,6 @@
            </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../templating/index.html" class="btn btn-neutral float-right" title="Templating" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../vos/index.html" class="btn btn-neutral" title="Vos" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

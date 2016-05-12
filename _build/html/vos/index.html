@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Description &mdash; LionFire Open Software 1.0 documentation</title>
+  <title>Vos &mdash; LionFire Open Software 1.0 documentation</title>
   
 
   
@@ -31,8 +31,8 @@
 
   
     <link rel="top" title="LionFire Open Software 1.0 documentation" href="../index.html"/>
-        <link rel="next" title="Description" href="../assets/index.html"/>
-        <link rel="prev" title="Description" href="../objectbus/index.html"/> 
+        <link rel="next" title="Vos Assets" href="../assets/index.html"/>
+        <link rel="prev" title="ObjectBus" href="../objectbus/index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,12 +82,19 @@
             
             
                 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../core/index.html">Description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../objectbus/index.html">Description</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../assets/index.html">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../core/index.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../objectbus/index.html">ObjectBus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../objectbus/index.html#obase-implementations">OBase Implementations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../objectbus/index.html#glossary">Glossary</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Vos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#layers">Layers</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#platforms-supported">Platforms Supported</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/index.html">Vos Assets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../assets/index.html#overview">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../templating/index.html">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../templating/index.html">Templating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">VOS</a></li>
 </ul>
 
             
@@ -118,7 +125,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>Description</li>
+    <li>Vos</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -132,8 +139,68 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="description">
-<h1>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="vos">
+<h1>Vos<a class="headerlink" href="#vos" title="Permalink to this headline">¶</a></h1>
+<p>Vos is an an experimental general purpose virtual filesystem for objects.  It stands for Virtual Object System.</p>
+</div>
+<div class="section" id="layers">
+<h1>Layers<a class="headerlink" href="#layers" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="external">
+<h2>External<a class="headerlink" href="#external" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>LionFire.Utility (to be refactored)
+* Multitype - Tools for manipulating objects with one or more types (decorator pattern)
+* Overlay - tools for overlaying and merging objects
+* Serialization</li>
+</ul>
+</div>
+<div class="section" id="foundation">
+<h2>Foundation<a class="headerlink" href="#foundation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ObjectBus (aka OBus).  OBase implementations:
+* FileSystem OBase
+* Vos OBase
+* RaptorKV (experimental)</li>
+</ul>
+</div>
+<div class="section" id="sophistication">
+<h2>Sophistication<a class="headerlink" href="#sophistication" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Vos - OBases including Vos OBases can be mounted at a Vos path.  Multiple OBases can be mounted at the same path with different read/write precedence.
+* Packages - Load/unload packages of data into the Vos tree.  Can be used to load expansion packs for games.
+* Overlays - When there are objects at multiple layers, this supports merging behavior.</li>
+</ul>
+</div>
+<div class="section" id="convenience-frameworks">
+<h2>Convenience Frameworks<a class="headerlink" href="#convenience-frameworks" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Assets - a simple convention mini-frameowrk for providing convenient access to instances of a particular data type based on a key specific to the type. (Effectively provides a flat alternative to the Vos hierarchy, similar to RDBMS with tables and primary keys, although subpaths are still supported.)</li>
+<li>Templating - Templates provide data that is shared by many instances.  Instantiation parameters are applied to a template to create an instance.</li>
+</ul>
+</div>
+<div class="section" id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Vos explorer</li>
+<li>Hopefully more coming soon</li>
+</ul>
+</div>
+<div class="section" id="external-dependencies">
+<h2>External Dependencies<a class="headerlink" href="#external-dependencies" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>JsonExSerializer (may be replaced with another, such as Json.NET)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="platforms-supported">
+<h1>Platforms Supported<a class="headerlink" href="#platforms-supported" title="Permalink to this headline">¶</a></h1>
+<p>The goal is to support .NET, .NET Core, and at some point Unity3D (maybe with the current .NET 3.5, but hopefully they will upgrade their mono soon.)</p>
+<ul class="simple">
+<li>.NET 4.6.2</li>
+<li>.NET 3.5 / Unity3D (current state TBD)</li>
+<li>Mono? (untested)</li>
+<li>.NET Core 1.0 - not started, but hopefully soon</li>
+</ul>
 </div>
 
 
@@ -143,10 +210,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../assets/index.html" class="btn btn-neutral float-right" title="Description" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../assets/index.html" class="btn btn-neutral float-right" title="Vos Assets" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../objectbus/index.html" class="btn btn-neutral" title="Description" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../objectbus/index.html" class="btn btn-neutral" title="ObjectBus" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

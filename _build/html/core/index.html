@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Description &mdash; LionFire Open Software 1.0 documentation</title>
+  <title>Core &mdash; LionFire Open Software 1.0 documentation</title>
   
 
   
@@ -31,8 +31,8 @@
 
   
     <link rel="top" title="LionFire Open Software 1.0 documentation" href="../index.html"/>
-        <link rel="next" title="Description" href="../objectbus/index.html"/>
-        <link rel="prev" title="LionFire Open Software Docs" href="../index.html"/> 
+        <link rel="next" title="ObjectBus" href="../objectbus/index.html"/>
+        <link rel="prev" title="Overview" href="../overview/index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,12 +82,24 @@
             
             
                 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../objectbus/index.html">Description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vos/index.html">Description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../assets/index.html">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html#vos">VOS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Core</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#planned">Planned</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../objectbus/index.html">ObjectBus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../objectbus/index.html#obase-implementations">OBase Implementations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../objectbus/index.html#glossary">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vos/index.html">Vos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vos/index.html#layers">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vos/index.html#platforms-supported">Platforms Supported</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/index.html">Vos Assets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../assets/index.html#overview">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../templating/index.html">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../templating/index.html">Templating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">Glossary</a></li>
 </ul>
 
             
@@ -118,7 +130,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>Description</li>
+    <li>Core</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -132,8 +144,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="description">
-<h1>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="core">
+<h1>Core<a class="headerlink" href="#core" title="Permalink to this headline">¶</a></h1>
+<p>A collection of common utilities and small frameworks.</p>
+<div class="section" id="lionfire-utility-dll">
+<h2>LionFire.Utility.dll<a class="headerlink" href="#lionfire-utility-dll" title="Permalink to this headline">¶</a></h2>
+<p>A large assortment of things I have found useful.  I plan to refactor this into smaller executables.</p>
+<ul class="simple">
+<li>Application/Shell framework - facilitates UI/application separation.  (Separate shell implementations for WPF and console apps exist.)</li>
+<li>Serialization</li>
+<li>Logging</li>
+<li>...</li>
+</ul>
+</div>
+</div>
+<div class="section" id="planned">
+<h1>Planned<a class="headerlink" href="#planned" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lionfire-core-abstractions">
+<h2>LionFire.Core.Abstractions<a class="headerlink" href="#lionfire-core-abstractions" title="Permalink to this headline">¶</a></h2>
+<p>This will be a small collection of common abstractions:</p>
+<ul class="simple">
+<li>Logging abstraction</li>
+<li>IOC abstraction (TinyIOC)</li>
+<li>EventAggregation abstraction</li>
+</ul>
+</div>
+<div class="section" id="lionfire-core">
+<h2>LionFire.Core<a class="headerlink" href="#lionfire-core" title="Permalink to this headline">¶</a></h2>
+<p>Default implementations for the abstractions in LionFire.Core.Abstractions</p>
+</div>
+<div class="section" id="lionfire-typing">
+<h2>LionFire.Typing<a class="headerlink" href="#lionfire-typing" title="Permalink to this headline">¶</a></h2>
+<p>Support for multi-type objects.</p>
+</div>
 </div>
 
 
@@ -143,10 +186,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../objectbus/index.html" class="btn btn-neutral float-right" title="Description" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../objectbus/index.html" class="btn btn-neutral float-right" title="ObjectBus" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral" title="LionFire Open Software Docs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../overview/index.html" class="btn btn-neutral" title="Overview" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

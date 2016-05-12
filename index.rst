@@ -13,13 +13,15 @@ Contents
 
 .. toctree::
    :titlesonly:
-   :maxdepth: 2
+   :maxdepth: 1
    
+   overview/index
    core/index
    objectbus/index
    vos/index
    assets/index
    templating/index
+   glossary/index
 
 
 Indices and tables
