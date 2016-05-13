@@ -3,22 +3,22 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+===========================
 LionFire Open Software Docs
 ===========================
 
-Actual content coming at some point!
-
 Contents
---------
+========
 
 .. toctree::
    :titlesonly:
-   :maxdepth: 1
+   :includehidden:
+   :maxdepth: 2
    
    overview/index
    core/index
-   objectbus/index
    vos/index
+   objectbus/index
    assets/index
    templating/index
    glossary/index
