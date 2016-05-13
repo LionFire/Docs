@@ -33,6 +33,7 @@ import sphinx_rtd_theme
 extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
+    'sphinxcontrib.dotnetdomain',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

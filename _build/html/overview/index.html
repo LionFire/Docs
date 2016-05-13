@@ -30,7 +30,9 @@
   
 
   
-    <link rel="top" title="LionFire Open Software 1.0 documentation" href="../index.html"/> 
+    <link rel="top" title="LionFire Open Software 1.0 documentation" href="../index.html"/>
+        <link rel="next" title="Core" href="../core/index.html"/>
+        <link rel="prev" title="LionFire Open Software Docs" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -79,8 +81,15 @@
           
             
             
-                <ul>
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#overview-of-projects">Overview of Projects</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../core/index.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../core/index.html#planned">Planned</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../objectbus/index.html">ObjectBus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../objectbus/index.html#obase-implementations">OBase Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../objectbus/index.html#glossary">Glossary</a></li>
@@ -138,20 +147,48 @@
   <div class="section" id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
 <p>Jared Thirsk and LionFire Games are making available various open source software packages.  Software is all C# so far, with some Aurelia-based web apps potentially coming at some point.</p>
+<dl class="docutils">
+<dt>Repository locations:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://github.com/lionfire">http://github.com/lionfire</a></li>
+<li><a class="reference external" href="http://github.com/jaredthirsk">http://github.com/jaredthirsk</a></li>
+</ul>
+</dd>
+</dl>
 <div class="section" id="current-status">
 <h2>Current Status<a class="headerlink" href="#current-status" title="Permalink to this headline">¶</a></h2>
-<p>Although I intend to put up several open source projects, not many are up yet.  My priority right now is to ship some (closed-source) software, but if you stumble upon this site and think some of my software may be useful, let me know by email (jared+public at thirsk.ca) and I&#8217;ll see if I have time to upload these projects.</p>
+<p>Although I intend to put up several open source projects, not (m)any are up yet.  My priority right now is to start collecting documentation for my own purposes, to capture the design for some more complex bits.</p>
+<p>My other priority right now is to ship some (closed-source) software, but if you stumble upon this site and think some of my software may be useful, let me know by email (jared+public at thirsk.ca) and I&#8217;ll see if I have time to upload these projects.</p>
 </div>
 </div>
+<div class="section" id="overview-of-projects">
+<h1>Overview of Projects<a class="headerlink" href="#overview-of-projects" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="vos">
-<h1>VOS<a class="headerlink" href="#vos" title="Permalink to this headline">¶</a></h1>
+<h2>VOS<a class="headerlink" href="#vos" title="Permalink to this headline">¶</a></h2>
 <p>Vos (Virtual object system) is an ambitious attempt to create a multi-purpose virtual filesystem, except centered around objects.  As with other virtual filesystems, the underlying data store could be files on a disk, hierarchical data provided by some sort of plugin, or virtual in-memory objects (like the linux /sys filesystem.)</p>
 <div class="section" id="child-projects">
-<h2>Child Projects<a class="headerlink" href="#child-projects" title="Permalink to this headline">¶</a></h2>
+<h3>Child Projects<a class="headerlink" href="#child-projects" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>ObjectBus</li>
-<li></li>
+<li>ObjectBus - data abstraction layer</li>
+<li>Assets - a microframework to flatten</li>
 </ul>
+</div>
+<div class="section" id="dependency-projects">
+<h3>Dependency Projects<a class="headerlink" href="#dependency-projects" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>LionFire Core
+* LionFire.Utility - an assortment of assorted things, to be refactored.
+* LionFire Serialization - abstraction of serialization (currently has a focus on JSON)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="templating">
+<h2>Templating<a class="headerlink" href="#templating" title="Permalink to this headline">¶</a></h2>
+<p>Templates are classes that can be serialized and deserialized, and then used to create instances.  Optionally, a Parameters object can be used to set the state of the instance.</p>
+<div class="section" id="object-state">
+<h3>Object State<a class="headerlink" href="#object-state" title="Permalink to this headline">¶</a></h3>
+<p>A microframework useful for saving and loading the state of an object.</p>
+</div>
 </div>
 </div>
 
@@ -159,6 +196,15 @@
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../core/index.html" class="btn btn-neutral float-right" title="Core" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="LionFire Open Software Docs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
