@@ -3,9 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-===========================
-LionFire Open Software Docs
-===========================
+====
+Home
+====
+
+This has documentation for `LionFire Open Software <http://open.lionfire.ca>`_ projects.
+
+
 
 Contents
 ========
@@ -13,8 +17,9 @@ Contents
 .. toctree::
    :titlesonly:
    :includehidden:
-   :maxdepth: 2
+   :maxdepth: 1
    
+   self
    overview/index
    core/index
    vos/index
