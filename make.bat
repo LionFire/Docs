@@ -5,6 +5,10 @@ REM Command file for Sphinx documentation
 if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=sphinx-build
 )
+if "%SPHINXAUTOBUILD%" == "" (
+	set SPHINXAUTOBUILD=sphinx-autobuild
+)
+
 set BUILDDIR=_build
 set ALLSPHINXOPTS=-d %BUILDDIR%/doctrees %SPHINXOPTS% .
 set I18NSPHINXOPTS=%SPHINXOPTS% .
@@ -57,6 +61,7 @@ goto sphinx_ok
 
 :sphinx_python
 
+echo.Using python module
 set SPHINXBUILD=python -m sphinx.__init__
 %SPHINXBUILD% 2> nul
 if errorlevel 9009 (
@@ -72,13 +77,39 @@ if errorlevel 9009 (
 )
 
 :sphinx_ok
+%SPHINXAUTOBUILD% 1>NUL 2>NUL
+if errorlevel 9009 goto sphinxauto_python
+goto sphinxauto_ok
 
+:sphinxauto_python
+
+set SPHINXAUTOBUILD=python -m sphinx_autobuild.__init__
+%SPHINXAUTOBUILD% 2> nul
+if errorlevel 9009 (
+	echo.
+	echo.The 'sphinx-autobuild' command was not found. Make sure you have Sphinx
+	echo.installed, then set the SPHINXBUILD environment variable to point
+	echo.to the full path of the 'sphinx-autobuild' executable. Alternatively you
+	echo.may add the Sphinx autobuild directory to PATH.
+	echo.
+	exit /b 1
+)
+
+:sphinxauto_ok
 
 if "%1" == "html" (
 	%SPHINXBUILD% -b html %ALLSPHINXOPTS% %BUILDDIR%/html
 	if errorlevel 1 exit /b 1
 	echo.
 	echo.Build finished. The HTML pages are in %BUILDDIR%/html.
+	goto end
+)
+
+if "%1" == "livehtml" (
+	%SPHINXAUTOBUILD% . _build/html -p 0 -B --delay 5 --ignore ".git/*"
+	if errorlevel 1 exit /b 1
+	echo.
+	echo.Live autobuild exited.
 	goto end
 )
 
