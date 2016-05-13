@@ -3,16 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-====
-Home
-====
-
-This has documentation for `LionFire Open Software <http://open.lionfire.ca>`_ projects.
-
+========
 Contents
 ========
 
-
+This site is the home for documentation of `LionFire Open Software <http://open.lionfire.ca>`_ projects.
 
 .. toctree::
    :titlesonly:
@@ -23,21 +18,18 @@ Contents
    overview/index
    
 .. toctree::
-   :titlesonly:
    :maxdepth: 2
    :caption: Core
    
    core/index
    
 .. toctree::
-   :titlesonly:
    :maxdepth: 2
    :caption: Structures
    
    templating/index
    
 .. toctree::
-   :titlesonly:
    :maxdepth: 2
    :caption: Vos
       

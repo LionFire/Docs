@@ -4,6 +4,9 @@ Core
 
 A collection of common utilities and small frameworks.
 
+Current
+=======
+
 LionFire.Utility.dll
 --------------------
 
@@ -16,7 +19,6 @@ A large assortment of things I have found useful.  I plan to refactor this into 
 
 Planned
 =======
-
 
 LionFire.Core.Abstractions
 --------------------------
