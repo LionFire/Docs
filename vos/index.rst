@@ -11,24 +11,21 @@ External
 --------
 
 * LionFire.Utility (to be refactored)
-  * Multitype - Tools for manipulating objects with one or more types (decorator pattern)
-  * Overlay - tools for overlaying and merging objects
-  * Serialization
+  - Multitype - Tools for manipulating objects with one or more types (decorator pattern)
+  - Overlay - tools for overlaying and merging objects
+  - Serialization
 
 Foundation
 ----------
 
-* ObjectBus (aka OBus).  OBase implementations:
-  * FileSystem OBase 
-  * Vos OBase
-  * RaptorKV (experimental)
+* `ObjectBus <../objectbus/index.html>`_ (aka OBus)
 
 Sophistication
 --------------
 
 * Vos - OBases including Vos OBases can be mounted at a Vos path.  Multiple OBases can be mounted at the same path with different read/write precedence.
-  * Packages - Load/unload packages of data into the Vos tree.  Can be used to load expansion packs for games.
-  * Overlays - When there are objects at multiple layers, this supports merging behavior.
+  - Packages - Load/unload packages of data into the Vos tree.  Can be used to load expansion packs for games.
+  - Overlays - When there are objects at multiple layers, this supports merging behavior.
 
 Convenience Frameworks
 ----------------------

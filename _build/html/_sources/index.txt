@@ -9,23 +9,47 @@ Home
 
 This has documentation for `LionFire Open Software <http://open.lionfire.ca>`_ projects.
 
-
-
 Contents
 ========
 
+
+
 .. toctree::
    :titlesonly:
-   :includehidden:
-   :maxdepth: 1
+   :maxdepth: 2
+   :caption: Overview
    
    self
    overview/index
+   
+.. toctree::
+   :titlesonly:
+   :maxdepth: 2
+   :caption: Core
+   
    core/index
+   
+.. toctree::
+   :titlesonly:
+   :maxdepth: 2
+   :caption: Structures
+   
+   templating/index
+   
+.. toctree::
+   :titlesonly:
+   :maxdepth: 2
+   :caption: Vos
+      
    vos/index
    objectbus/index
-   assets/index
-   templating/index
+   Assets <assets/index>
+   
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :caption: Miscellaneous
+
    glossary/index
 
 
