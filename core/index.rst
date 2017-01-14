@@ -4,11 +4,25 @@ Core
 
 A collection of common utilities and small frameworks.
 
-Current
+LionFire.Extensions.Runtime
+---------------------------
+ 
+ * Small set of commonly used augmentations to BCL
+ * Some miscellaneous classes that are alternatives to BCL classes or fill common gaps.
+ * Trying to strike a balance of keeping this small, while collecting some commonly used small items, while avoiding larger and opinionated items that are likely to not be used at some point in the future.    
+
+ * Structures
+   - `Singletons <runtime/structures/singletons.html>`_
+     - Singleton<T>
+     - ManualSingleton<T>
+   - `Applications `applications/applications.html>`_
+
+
+1st-Gen
 =======
 
-LionFire.Utility.dll
---------------------
+1st-Gen LionFire.Utility.dll
+----------------------------
 
 A large assortment of things I have found useful.  I plan to refactor this into smaller executables.
 
