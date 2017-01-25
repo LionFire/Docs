@@ -27,7 +27,7 @@ This site is the home for documentation of `LionFire Open Software <http://open.
    :maxdepth: 2
    :caption: Structures
    
-   templating/index
+   instantiating/index
    
 .. toctree::
    :maxdepth: 2

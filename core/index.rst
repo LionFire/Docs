@@ -2,7 +2,7 @@
 Core
 ====
 
-A collection of common utilities and small frameworks.
+A collection of minimalistic utilities and nano-frameworks that are too small to have their own framework.
 
 LionFire.Extensions.Runtime
 ---------------------------
@@ -15,8 +15,24 @@ LionFire.Extensions.Runtime
    - `Singletons <runtime/structures/singletons.html>`_
      - Singleton<T>
      - ManualSingleton<T>
-   - `Applications `applications/applications.html>`_
+   - `Applications <applications/applications.html>`_
 
+ * `MessageBus <messagebus/index.rst>`_
+   - MBus.Publish("Hello")
+   - IObserver<T> sub = MBus.Subscribe<T>();
+
+ * `DependencyInjection <dependencyinjection/index.rst>`_
+
+LionFire.Environment
+--------------------
+
+  * Commonly used variables used for environment, similar to System.Environment but with some helpers and additions commonly used in LionFire applications.
+
+LionFire.Annotations.Compilation
+--------------------------------
+
+  * Attributes used at compile time, for use with weavers such as Fody
+    
 
 1st-Gen
 =======
