@@ -22,6 +22,7 @@ LionFire.Extensions.Runtime
    - IObserver<T> sub = MBus.Subscribe<T>();
 
  * `DependencyInjection <dependencyinjection/index.rst>`_
+   - Defaults class: Get/Set methods
 
 LionFire.Environment
 --------------------
