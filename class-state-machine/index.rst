@@ -8,16 +8,81 @@ GitHub home: https://github.com/lionfire/class-state-machine
 .. toctree::
    :titlesonly:
    :maxdepth: 2
-   :caption: Topcis
+   :caption: Topics
    
    roadmap
-   test
 
 Overview
-===============
+========
 
-Quick Start
-============
+A convention-oriented state machine for typical C# classes.  
+
+Status
+------
+
+In early development.  Early code generation is working, but no events yet.
+
+Design Goals
+------------
+
+ - Make it easy to turn typical C# classes into state machines 
+ - Make it easy to enforce conventions and state machine logic
+ - Augment existing common coding style, with minimal imposition
+ - Unintrusive on target codebase
+   - No dependencies (aside from .NET Standard)
+   - No base class
+   - Optional code generation (separate DLL)
+ - Harness Roslyn to generate design-time code that offers Intellisense and reduces the need for reflection during run-time startup  
+ - AOT compatible in order to run on iOS: no Reflection.Emit
+ - Harness design-time code generation to eliminate boilerplate and promote standardization.
+ - Allow users to create comprehensive state machine models, and have them autommatically trimmed down to the used states and transitions.
+ - Support hierarchical state machines (FUTURE)
+
+Features
+--------
+
+ - Efficent and conveniently flexible method handlers
+   - OnEntering{State}() or On{State}
+   - OnLeaving{State}() or After{State}
+   - On{Transition}() 
+ - Flexible language
+   - On{Transition}(): OnInitialize or OnInitializing
+ - Flexible events:
+   - StateMachine.StateChanged
+   - StateMachine.StateChanging
+   - {Transition}
+ - Guards
+   - Can{Transition} methods
+   - CanLeave{State} / CanEnter{State} methods
+ - Cancelation
+   - StateChangingContext
+ - Allow user to override all conventions (FUTURE)
+
+Requirements and impositions
+----------------------------
+
+ - Generated state machine code must be on a partial class with the [GenerateStateMachine] attribute.
+ - States and transitions are defined as enum flags.  
+   - FUTURE: Allow arbitrary objects as long as they are IEquatable?
+ - Transition flags have attributes that define from and to states. 
+   - FUTURE: Allow specification of transition info provider via provider type provided to [GenerateStateMachine] attribute
+ - [StartingState] attribute on a member of the state enum indicates initial state 
+   - FUTURE: Allow specification of starting state via [GenerateStateMachine] attribute
+
+Roadmap (features under consideration)
+======================================
+
+ - Replace more reflection with design-time generated code
+ 
+ - Extension DLL: Tools for state machines:
+   - IStateMachine and IHas<IStateMachine>
+   - IStateMachine members:
+     - CurrentState
+     - StateChanging event
+
+
+Quick Start Sample
+==================
 
 
 .. code-block:: C#
@@ -89,34 +154,5 @@ Quick Start
 
     }
 
-Design Goals
-=============
-
- - Standardize how typical state machines are made
- - AOT compatible: no Reflection.Emit
- - Harness design-time code generation to eliminate boilerplate and promote standardization.
- - Allow users to create reusable state machine models, and trim them down to a class. (TODO)
- - Support hierarchical state machines (TODO)
- - Efficently and conveniently flexible method handlers
-   - OnEntering{State}() or On{State}
-   - OnLeaving{State}() or After{State}
-   - On{Transition}() 
- - Flexible language
-   - On{Transition}(): OnInitialize or OnInitializing
- - Flexible events:
-   - StateMachine.StateChanged
-   - StateMachine.StateChanging
-   - {Transition}
- - Guards
-   - Can{Transition} methods
-   - CanLeave{State} / CanEnter{State} methods
- - Cancelation
-   - StateChangingContext
 
 
-Roadmap (features under consideration)
-===================================
-
- - Replace more reflection with design-time generated code
-
- 
