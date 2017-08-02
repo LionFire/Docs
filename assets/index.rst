@@ -8,18 +8,11 @@ Assets will be stored in a location configured once by the application, and the 
 
 This is a child project of Vos.
 
-Overview
-========
-
-Creating an Asset
------------------
-
-.. code-block:: C#
-
-   var hTower = new HAsset<TCapacitor>("Tower3");
-  
-  
-.. code-block:: C#
-
-   var rTower = AssetReference<TCapacitor>.FromName("Tower3");
+.. toctree::
+   :titlesonly:
+   :maxdepth: 2
+   :caption: Topcis
+   
+   creating-assets
+   referencing-assets
 
