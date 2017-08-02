@@ -53,4 +53,4 @@ The goal is to support .NET, .NET Core, and at some point Unity3D (maybe with th
 * .NET 4.6.2
 * .NET 3.5 / Unity3D (current state TBD)
 * Mono? (untested)
-* .NET Core 1.0 - not started, but hopefully soon
+* .NET Core 1.1 - not started, but hopefully soon

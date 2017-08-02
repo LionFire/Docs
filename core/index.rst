@@ -2,13 +2,44 @@
 Core
 ====
 
-A collection of common utilities and small frameworks.
+A collection of minimalistic utilities and nano-frameworks that are too small to have their own framework.
 
-Current
+LionFire.Extensions.Runtime
+---------------------------
+ 
+ * Small set of commonly used augmentations to BCL
+ * Some miscellaneous classes that are alternatives to BCL classes or fill common gaps.
+ * Trying to strike a balance of keeping this small, while collecting some commonly used small items, while avoiding larger and opinionated items that are likely to not be used at some point in the future.    
+
+ * Structures
+   - `Singletons <runtime/structures/singletons.html>`_
+     - Singleton<T>
+     - ManualSingleton<T>
+   - `Applications <applications/applications.html>`_
+
+ * `MessageBus <messagebus/index.rst>`_
+   - MBus.Publish("Hello")
+   - IObserver<T> sub = MBus.Subscribe<T>();
+
+ * `DependencyInjection <dependencyinjection/index.rst>`_
+   - Defaults class: Get/Set methods
+
+LionFire.Environment
+--------------------
+
+  * Commonly used variables used for environment, similar to System.Environment but with some helpers and additions commonly used in LionFire applications.
+
+LionFire.Annotations.Compilation
+--------------------------------
+
+  * Attributes used at compile time, for use with weavers such as Fody
+    
+
+1st-Gen
 =======
 
-LionFire.Utility.dll
---------------------
+1st-Gen LionFire.Utility.dll
+----------------------------
 
 A large assortment of things I have found useful.  I plan to refactor this into smaller executables.
 
