@@ -22,12 +22,13 @@ This site is the home for documentation of `LionFire Open Software <http://open.
    :caption: Core
    
    core/index
-   
+ 
 .. toctree::
    :maxdepth: 2
    :caption: Structures
    
    instantiating/index
+   class-state-machine/index
    
 .. toctree::
    :maxdepth: 2
