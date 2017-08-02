@@ -40,53 +40,54 @@ Quick Start
         [Transition(MyState.Uninitialized, MyState.Finished)]
         Finish 
     };
-[StateMachine]
-public class MyClass
-{
 
-  public void OnInitialize()
-  {
-  }
+    [StateMachine]
+    public class MyClass
+    {
 
-  private string mustNotBeNull;
-  public bool CanLeaveUninitialized()
-  {
-    if(mustNotBeNull == null) return false;
+      public void OnInitialize()
+      {
+      }
 
-    return true;
-  }
+      private string mustNotBeNull;
+      public bool CanLeaveUninitialized()
+      {
+	      if(mustNotBeNull == null) return false;
 
-  public void AfterReady(StateChangeContext context)
-  {
-    if(context.Cancel();
-  }
+	      return true;
+      }
 
-  public void OnStart()
-  {
-  }
+      public void AfterReady(StateChangeContext context)
+      {
+	      context.Cancel();
+      }
 
-  public void OnFinished()
-  {
-  }
+      public void OnStart()
+      {
+      }
 
-  public void Test()
-  {
-    Console.WriteLine(stateMachine.CurrentState); // Uninitialized
+      public void OnFinished()
+      {
+      }
 
-    mustNotBeNull = "hello";
-    Initialize();
-    Console.WriteLine(stateMachine.CurrentState); // Ready 
-    
-    Start();
-    Console.WriteLine(stateMachine.CurrentState); // Started
-    
-    Finish();
-    Console.WriteLine(stateMachine.CurrentState); // Finished
-  }
+      public void Test()
+      {
+        Console.WriteLine(stateMachine.CurrentState); // Uninitialized
 
-  // Members not defined here are generated in obj/.../MyClass.{hashcode}.generated.cs
+        mustNotBeNull = "hello";
+        Initialize();
+        Console.WriteLine(stateMachine.CurrentState); // Ready 
+        
+        Start();
+        Console.WriteLine(stateMachine.CurrentState); // Started
+        
+        Finish();
+        Console.WriteLine(stateMachine.CurrentState); // Finished
+      }
 
-}
+      // Members not defined here are generated in obj/.../MyClass.{hashcode}.generated.cs
+
+    }
 
 Design Goals
 =============
