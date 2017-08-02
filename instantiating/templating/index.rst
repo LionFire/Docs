@@ -2,7 +2,7 @@ Templating
 ==========
 
 The Templating framework assists with structuring template info that is shared with many objects, and parameters that can be used to initialize individual objects. 
- 
+  
 Core Concepts
 =============
 
