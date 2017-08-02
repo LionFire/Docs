@@ -10,7 +10,6 @@ GitHub home: https://github.com/lionfire/class-state-machine
    :maxdepth: 2
    :caption: Topics
    
-   roadmap
 
 Overview
 ========
