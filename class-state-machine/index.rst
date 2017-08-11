@@ -19,7 +19,14 @@ A convention-oriented state machine for typical C# classes.
 Status
 ------
 
-In early development.  Early code generation is working, but no events yet.
+Pre-alpha preview ready.  Give it a shot and give me feedback.
+
+Working:
+ - Transitions
+ - States
+ - Event handlers
+
+See the unit tests for examples. 
 
 Design Goals
 ------------
@@ -71,6 +78,9 @@ Requirements and impositions
 Roadmap (features under consideration)
 ======================================
 
+ - Hierachical state machine support
+   - Sub-state machine example: paused/unpaused under running
+   - Sub-state machine example: limited exit states from substate machine
  - Replace more reflection with design-time generated code
  
  - Extension DLL: Tools for state machines:
@@ -78,6 +88,12 @@ Roadmap (features under consideration)
    - IStateMachine members:
      - CurrentState
      - StateChanging event
+
+  - Optional extensibility / lightweightness features:
+    - Optionally parameterized state changes
+    - Optionally remember previous transition
+    - Optional zero meomory allocation (can be helpful in games)
+  - Wrapper/Adapter for goal-seeking, if the desired state change is only possible with multiple steps.
 
 
 Quick Start Sample
