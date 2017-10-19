@@ -105,7 +105,8 @@ Reference these 2 nuget packages:
 
 Nuget.config:
 
-.. code-block:: XML
+.. code-block::
+ 
     <?xml version="1.0" encoding="utf-8"?>
     <configuration>
       <packageSources>
@@ -113,7 +114,6 @@ Nuget.config:
         <add key="corefxlab" value="https://dotnet.myget.org/F/dotnet-corefxlab/api/v3/index.json" />
       </packageSources>
     </configuration>
-
 
 .. code-block:: C#
 
