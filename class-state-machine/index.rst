@@ -105,8 +105,8 @@ Reference these 2 nuget packages:
 
 Nuget.config:
 
-.. code-block::
- 
+.. code-block:: xml
+
     <?xml version="1.0" encoding="utf-8"?>
     <configuration>
       <packageSources>
