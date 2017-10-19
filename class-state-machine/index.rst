@@ -99,6 +99,9 @@ Roadmap (features under consideration)
 Quick Start Sample
 ==================
 
+Reference these 2 nuget packages:
+ * LionFire.StateMachines.Class.Generation
+ * CodeGeneration.Roslyn.BuildTime
 
 .. code-block:: C#
 
