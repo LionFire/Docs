@@ -105,7 +105,9 @@ Quick Start Sample
         Finish 
     };
 
-    [StateMachine]
+    // NOTE: Due to a limitation at the moment the State and Transition types have to be in a separate assembly. (Pull-requests welcome.)
+
+    [StateMachine(typeof(MyState), typeof(MyTransition)]
     public class MyClass
     {
 

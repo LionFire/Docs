@@ -1,15 +1,73 @@
-====
-Core
-====
+=======================
+Core (and dependencies)
+======================= 
 
-A collection of minimalistic utilities and nano-frameworks that are too small to have their own framework.
+[Overhaul / refactor in progress as of Oct 2017]
 
-LionFire.Extensions.Runtime
----------------------------
- 
- * Small set of commonly used augmentations to BCL
- * Some miscellaneous classes that are alternatives to BCL classes or fill common gaps.
- * Trying to strike a balance of keeping this small, while collecting some commonly used small items, while avoiding larger and opinionated items that are likely to not be used at some point in the future.    
+A core set of infrastructure and mini-frameworks to support the LionFire.Core Framework's information architecture strategy.
+
+To use:
+ * Via nuget, reference the metapackage 'LionFire.Standard' (TODO)
+
+DLLs from lower levels to higher:
+
+LionFire.Base
+--------------
+ * Augmentations to the .NET Base Class Library
+ * (FUTURE: Consider making these single .cs file nuget includes)
+
+ * LionFire.Execution.AutoRetry
+  
+
+LionFire.Structures
+-------------------
+ * Various collection classes that are used frequently and useful on their own.
+ * (FUTURE: Consider merging with LionFire.Base)
+ * IComposable
+   * Standardized interface for composition: adding and accessing children
+ * IKeyed
+   * Allows keys for dictionaries to be extracted from within an object
+
+LionFire.Referencing.Abstractions
+-----------------------------------
+
+References to objects!  References can change, so references can be synced.  Since things can get out of sync, there can be version control and automatic and manual merge conflict resolution.
+
+ * Handles
+   * IReadHandle<T> - lazily loadable reference to an object
+   * IHandle<T> - combination of IReadHandle<T> and IWriteHandle<T>
+   * Idea for prefixes:
+     * RSomething - readonly handle
+     * HSomething - readwrite handle.
+     * WSomething - writeonly handle.
+ * References
+ * Lit (version control)
+
+LionFire.Referencing
+---------------------
+ * ReferenceFactory
+   * IReference ToReference(this string uri);
+ * TODO - HandleResolver 
+
+LionFire.Core(.Abstractions)
+--------------------------------
+
+TODO: Figure out how much of this to spin out into separate DLLs.
+
+ Core frameworks that provide cohesion points among LionFire Libraries:
+ * Ambience
+   * Context-oriented programming: 
+     * Simple apps: use statics
+     * Complex apps: use ThreadStatic data
+     * Example uses: InjectionContext, PersistenceContext, LogContext
+ * Events: PubSub/Logging/Alerting/Notifying
+ * Dependency Injection / service location
+   * Defaults
+   * Singleton
+ * MultiTyping
+ * Type Resolution
+ * Validation
+
 
  * Structures
    - `Singletons <runtime/structures/singletons.html>`_
