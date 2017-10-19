@@ -103,6 +103,18 @@ Reference these 2 nuget packages:
  * LionFire.StateMachines.Class.Generation
  * CodeGeneration.Roslyn.BuildTime
 
+Nuget.config:
+
+.. code-block:: XML
+    <?xml version="1.0" encoding="utf-8"?>
+    <configuration>
+      <packageSources>
+        <add key="api.nuget.org" value="https://api.nuget.org/v3/index.json" />
+        <add key="corefxlab" value="https://dotnet.myget.org/F/dotnet-corefxlab/api/v3/index.json" />
+      </packageSources>
+    </configuration>
+
+
 .. code-block:: C#
 
     [Flags]
